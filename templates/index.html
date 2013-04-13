@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+    {% include 'navbar.html' %}
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>АРМ работника биржи труда</h1>
+        <p class="lead">Регистрируйте компании и соискателей, получайте отчеты, ебите гусей!</p>
+        <a class="btn btn-large btn-success" href="#">Начать сейчас</a>
+      </div>
+
+      <hr>
+
+      <!-- Example row of columns -->
+      <div class="row-fluid">
+        <div class="span4">
+          <h2>Зарегистрировать Компанию</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">Дальше</a></p>
+        </div>
+        <div class="span4">
+          <h2>Зарегистрировать Соискателя</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">Дальше</a></p>
+       </div>
+        <div class="span4">
+          <h2>Получить отчеты</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <p><a class="btn" href="#">Дальше</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; ИС-03 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+{% endblock %}
+
+{% block footer%}
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{STATIC_URL}}js/jquery.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-transition.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-alert.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-modal.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-dropdown.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-scrollspy.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-tab.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-tooltip.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-popover.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-button.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-collapse.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-carousel.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-typeahead.js"></script>
+{% endblock %}
