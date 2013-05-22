@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+    {% include 'navbar.html' %}
+    <div class="well">
+        <table class="table">
+        <tr>
+            <td>
+        <select id="type_box" size="2" class="select">
+        <option value="candidate">Кандидат</option>
+        <option value="company">Компания</option>
+        </select>
+    </td>
+    <td>
+        <select id="first_result_box" size="10" class="select" style="display:none;">
+        </select>
+    </td>
+    <td id="third">
+        <select id="vacancy_box" size="10" class="select" style="display:none;">
+        </select>
+    </td>
+    </tr>
+</table>
+    </div>
+    <div class="well">
+        <table id='results_table' class="table">
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <a class="btn btn-success">Export PDF</a>
+    </div>
+<script type="text/javascript">
+window.CSRF = '{{ csrf_token }}';
+</script>
+{% endblock %}
+
+{% block footer%}
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{STATIC_URL}}js/jquery-1.8.2.min.js"></script>
+    <script src="{{STATIC_URL}}js/json2html.js"></script>
+    <script src="{{STATIC_URL}}js/search.js"></script>
+{% endblock %}

@@ -47,10 +47,10 @@
     </div>
     <!-- END Header -->
     {% block breadcrumbs %}
-    <div class="breadcrumbs">
-    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
-    {% if title %} &rsaquo; {{ title }}{% endif %}
-    </div>
+    <ul class="breadcrumbs">
+    <li><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
+    <li>{% if title %} &rsaquo; {{ title }}{% endif %}</li>
+    </ul>
     {% endblock %}
     {% endif %}
 
@@ -65,7 +65,7 @@
     <!-- Content -->
     <div class="{% block coltype %}container{% endblock %}">
         {% block pretitle %}{% endblock %}
-        {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
+        {% block content_title %}{% endblock %}
         {% block content %}
         {% block object-tools %}{% endblock %}
         {{ content }}
